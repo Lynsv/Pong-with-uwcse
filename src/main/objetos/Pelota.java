@@ -77,8 +77,10 @@ public class Pelota extends Objeto {
                      direccionY = 1;
                  else if(diferencia < 0)
                      direccionY = -1;
-                 else
+                 else{
                      direccionY*=-1;
+                     if(direccionY == 0) direccionY = rand.nextInt(-2,2);
+                 }
             }
              return;
         }
