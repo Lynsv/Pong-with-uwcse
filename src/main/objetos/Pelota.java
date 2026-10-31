@@ -25,10 +25,11 @@ public class Pelota extends Objeto {
     double anteriorJugador2;
     double actualJugador2 = 0;
 
-    public Pelota(double x, double y, String imagen, Motor motor,Objeto jugador1, Objeto jugador2) throws IOException {
+    public Pelota(double x, double y, String imagen, Motor motor,Marcador marcador,Objeto jugador1, Objeto jugador2) throws IOException {
         super(x, y, new Imagen(imagen), motor);
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
+        this.marcador = marcador;
 
         actualJugador1 = jugador1.getY();
         actualJugador2 = jugador2.getY();
@@ -105,7 +106,10 @@ public class Pelota extends Objeto {
 
     private void cambiarX(){
         if(x < limiteIzq){
-            if(x<0) reiniciar();
+            if(x<0){
+                reiniciar();
+                marcador.marcarDer();
+            }
             if(x <limiteIzq-jugadorAncho)
                 return;
             if(jugador1.getY()+ jugadorAltura > y && jugador1.getY()- jugadorAltura < y && direccionX < 0){
@@ -114,7 +118,10 @@ public class Pelota extends Objeto {
             }
         }
         if(x > limiteDer){
-            if(x>800) reiniciar();
+            if(x>800){
+                reiniciar();
+                marcador.marcarIzq();
+            }
             if(x > limiteDer+jugadorAncho)
                 return;
 
@@ -143,4 +150,5 @@ public class Pelota extends Objeto {
 
     private Objeto jugador1;
     private Objeto jugador2;
+    private Marcador marcador;
 }

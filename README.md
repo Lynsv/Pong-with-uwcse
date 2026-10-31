@@ -8,7 +8,6 @@
 
     ## TODO
      - Implementar sonido y música
-     - Controlador de puntajes
 
 
     ## Créditos:
