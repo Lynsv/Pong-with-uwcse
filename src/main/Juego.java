@@ -15,7 +15,7 @@ public class Juego {
 
         IAPong ia = new IAPong(700,40,"palo.png",motor);
         Pelota pelota = new Pelota(400,300,"pelota.png",motor);
-        Jugador jugador = new Jugador(80,100,"palo.png",motor);
+        Jugador jugador = new Jugador(80,100,"palo.png",motor,motor.INPUT);
 
         motor.add(ia);
         motor.add(pelota);

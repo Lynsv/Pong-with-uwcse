@@ -14,6 +14,8 @@ import java.util.List;
 public class Motor {
     final List<Objeto> objetos = new ArrayList<>();
     final GWindow ventana;
+    public final Input INPUT = new Input();
+
     TextShape fpsText;
     double timeCounter = 0;
     int fpsCounter = 0;
@@ -66,6 +68,7 @@ public class Motor {
     }
 
     public void renderizar(Objeto objeto){
+        ventana.addEventHandler(INPUT);
         objeto.getImagen().moveTo(objeto.getX(),objeto.getY());
     }
 

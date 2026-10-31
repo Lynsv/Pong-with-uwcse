@@ -36,7 +36,7 @@ public class Objeto {
     }
 
     private Imagen imagen;
-    final private Motor motor;
+    final protected Motor motor;
     protected double x;
     protected double y;
 }
