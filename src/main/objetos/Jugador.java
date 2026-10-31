@@ -12,18 +12,19 @@ import java.io.IOException;
  * @created 31/10/26
  */
 public class Jugador extends Objeto {
-    Input input;
-    public Jugador(double x, double y, String imagen, Motor motor,Input input) throws IOException {
+    int limiteSuperior = 22;
+    int limiteInferior = 514;
+    public Jugador(double x, double y, String imagen, Motor motor) throws IOException {
         super(x, y, new Imagen(imagen), motor);
-        this.input = input;
+
     }
 
     @Override
     public void actualizar(double delta){
-        if(input.isDown('w') && y >= 22){
+        if(motor.INPUT.isDown('w') && y >= limiteSuperior){
             y-=velocidad*delta;
         }
-        if(input.isDown('s') && y <= 514){
+        if(motor.INPUT.isDown('s') && y <= limiteInferior){
             y+=velocidad*delta;
         }
         renderizar();
