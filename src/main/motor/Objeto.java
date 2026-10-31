@@ -34,7 +34,6 @@ public class Objeto {
     public void renderizar(){
         motor.renderizar(this);
     }
-
     private Imagen imagen;
     final protected Motor motor;
     protected double x;
