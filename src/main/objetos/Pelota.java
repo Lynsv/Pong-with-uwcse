@@ -17,6 +17,8 @@ public class Pelota extends Objeto {
     int limiteDer = 665;
     int jugadorAltura = 30;
     int jugadorAncho = 30;
+    double originalX;
+    double originalY;
 
     double anteriorJugador1;
     double actualJugador1 = 0;
@@ -30,6 +32,8 @@ public class Pelota extends Objeto {
 
         actualJugador1 = jugador1.getY();
         actualJugador2 = jugador2.getY();
+        originalX = x;
+        originalY = y;
     }
 
     public void acelerar(){
@@ -52,8 +56,8 @@ public class Pelota extends Objeto {
         while(direccionX == 0)
             direccionX = rand.nextInt(-2,2);
         direccionY = rand.nextInt(-2,2);
-        x = 400;
-        y = 300;
+        x = originalX;
+        y = originalY;
         velocidad = 100;
     }
 
