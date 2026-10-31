@@ -57,13 +57,7 @@ public class Marcador extends Objeto {
         marcadorIzq.removeFirst();
         renderizar();
         if(marcadorIzq.size() <= 1) {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-            System.exit(200);
+           motor.salir();
         }
     }
 
@@ -73,12 +67,7 @@ public class Marcador extends Objeto {
         marcadorDer.removeFirst();
         renderizar();
         if(marcadorDer.size() <= 1) {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            System.exit(200);
+            motor.salir();
         }
     }
 

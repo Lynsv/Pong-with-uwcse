@@ -68,6 +68,12 @@ public class Motor {
 
     public void salir(){
         reproducir = false;
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.exit(200);
     }
 
     public void renderizar(Objeto objeto){
