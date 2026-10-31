@@ -20,10 +20,10 @@ public class Jugador extends Objeto {
 
     @Override
     public void actualizar(double delta){
-        if(input.isDown('w')){
+        if(input.isDown('w') && y >= 22){
             y-=velocidad*delta;
         }
-        if(input.isDown('s')){
+        if(input.isDown('s') && y <= 514){
             y+=velocidad*delta;
         }
         renderizar();

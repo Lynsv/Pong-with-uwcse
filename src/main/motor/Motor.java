@@ -25,7 +25,6 @@ public class Motor {
         ventana = new GWindow(nombre,ancho,alto);
         ventana.setExitOnClose();
         fpsText = new TextShape("0",0,0, Color.RED);
-        ventana.add(fpsText);
     }
 
     public GWindow getVentana(){
@@ -36,6 +35,10 @@ public class Motor {
         objetos.add(objeto);
         renderizar(objeto);
         ventana.add(objeto.getImagen().getForma());
+    }
+
+    public void showfps(){
+        ventana.add(fpsText);
     }
 
     public void remove(Objeto objeto){

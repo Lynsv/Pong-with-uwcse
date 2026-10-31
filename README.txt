@@ -8,7 +8,6 @@
 
     ## TODO
      - Implementar sonido y música
-     - Controles para el jugador
      - Una IA funcional
      - Controlador de puntajes
 

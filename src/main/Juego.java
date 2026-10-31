@@ -20,6 +20,7 @@ public class Juego {
         motor.add(ia);
         motor.add(pelota);
         motor.add(jugador);
+        motor.showfps();
         motor.iniciar();
     }
 }
