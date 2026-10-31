@@ -20,7 +20,7 @@ Para iniciar presione la tecla **P** y muévase hacia arriba o abajo con las tec
 El primero que logre tres puntos gana, la dificultad va aumentando con el tiempo porque la pelota acelera con cada toque.
 Una vez gané el jugador o la IA el juego se congela durante tres segundos y se cierra automáticamente
 
-[Screenshot](src/imagenes/Screenshot.png)
+![Screenshot](src/imagenes/Screenshot.png)
 
 
 ## Créditos:
