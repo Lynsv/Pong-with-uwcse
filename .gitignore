@@ -1,0 +1,11 @@
+/.idea
+/build
+/nbproject
+/out
+/test
+/.git
+build.xml
+manifest.mf
+.gitignore
+UWCSEk.iml
+
