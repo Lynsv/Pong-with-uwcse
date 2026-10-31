@@ -3,6 +3,7 @@ package main.objetos;
 import main.motor.Imagen;
 import main.motor.Motor;
 import main.motor.Objeto;
+import main.motor.Sonido;
 
 import java.io.IOException;
 import java.util.Random;
@@ -65,6 +66,7 @@ public class Pelota extends Objeto {
     private void cambiarY(){
         if(y > 540 || y < 0){
             direccionY*=-1;
+            sonido.reproducir();
             return;
         }
         if(x<limiteIzq){
@@ -83,6 +85,7 @@ public class Pelota extends Objeto {
                      if(direccionY == 0) direccionY = rand.nextInt(-2,2);
                  }
             }
+            sonido.reproducir();
              return;
         }
 
@@ -100,6 +103,7 @@ public class Pelota extends Objeto {
                 else
                     direccionY*=-1;
             }
+            sonido.reproducir();
         }
 
     }
@@ -115,6 +119,7 @@ public class Pelota extends Objeto {
             if(jugador1.getY()+ jugadorAltura > y && jugador1.getY()- jugadorAltura < y && direccionX < 0){
                 direccionX*=-1;
                 acelerar();
+                sonido.reproducir();
             }
         }
         if(x > limiteDer){
@@ -128,6 +133,7 @@ public class Pelota extends Objeto {
             if(jugador2.getY()+ jugadorAltura > y && jugador2.getY()- jugadorAltura < y && direccionX > 0){
                 direccionX*=-1;
                 acelerar();
+                sonido.reproducir();
             }
         }
 
@@ -151,4 +157,6 @@ public class Pelota extends Objeto {
     private Objeto jugador1;
     private Objeto jugador2;
     private Marcador marcador;
+
+    private Sonido sonido = new Sonido("pong.wav");
 }

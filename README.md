@@ -6,9 +6,5 @@
 
     Se implemento el uso de un deltaTime y se limitó a 60 fps
 
-    ## TODO
-     - Implementar sonido y música
-
-
     ## Créditos:
     **música**: tcarisland https://opengameart.org/content/happy-8-bit

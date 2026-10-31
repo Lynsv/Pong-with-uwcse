@@ -1,6 +1,7 @@
 package main;
 import main.motor.Imagen;
 import main.motor.Motor;
+import main.motor.Sonido;
 import main.objetos.IAPong;
 import main.objetos.Jugador;
 import main.objetos.Marcador;
@@ -12,6 +13,7 @@ public class Juego {
     public static void main(String[] args) throws InterruptedException, IOException {
         Motor motor = new Motor("Pong",800,600);
         Imagen fondo = new Imagen("Background.png");
+        Sonido musica = new Sonido("Happy8Bit.wav");
         motor.getVentana().add(fondo.getForma());
 
         Marcador marcador = new Marcador(380,100,motor, new String[]{"digit0.png","digit1.png","digit2.png","digit3.png"});
@@ -25,6 +27,7 @@ public class Juego {
         motor.add(pelota);
         motor.add(jugador);
         motor.showfps();
+        musica.reproducirLoop();
         motor.iniciar();
     }
 }
