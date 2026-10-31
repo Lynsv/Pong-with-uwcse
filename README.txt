@@ -8,7 +8,6 @@
 
     ## TODO
      - Implementar sonido y música
-     - Una IA funcional
      - Controlador de puntajes
 
 
