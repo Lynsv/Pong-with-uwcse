@@ -12,10 +12,10 @@ public class Juego {
         Imagen fondo = new Imagen("Background.png");
         motor.getVentana().add(fondo.getForma());
 
-        IAPong jugador = new IAPong(700,40,"palo.png",motor);
+        IAPong ia = new IAPong(700,40,"palo.png",motor);
         Pelota pelota = new Pelota(400,300,"pelota",motor);
 
-        motor.add(jugador);
+        motor.add(ia);
         motor.add(pelota);
         motor.iniciar();
     }
